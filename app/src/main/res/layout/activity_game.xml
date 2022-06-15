@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textguntingkertasbatu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_p1"
+        style="@style/linear_size"
+        android:layout_marginStart="28dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head">
+
+        <TextView
+            android:id="@+id/tv_player1"
+            android:text="Player 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iv_rock_p1"
+            style="@style/hand_size"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_batu"/>
+
+        <ImageView
+            android:id="@+id/iv_paper_p1"
+            style="@style/hand_size"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_kertas"/>
+
+        <ImageView
+            android:id="@+id/iv_scissor_p1"
+            style="@style/hand_size"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_gunting"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_result"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/ic_vs"
+        app:layout_constraintEnd_toStartOf="@id/layout_p2"
+        app:layout_constraintStart_toEndOf="@+id/layout_p1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head" />
+
+    <LinearLayout
+        android:id="@+id/layout_p2"
+        style="@style/linear_size"
+        android:layout_marginEnd="28dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head">
+
+        <TextView
+            android:id="@+id/tv_layer2"
+            android:text="Player 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_head" />
+
+        <ImageView
+            android:id="@+id/iv_rock_p2"
+            style="@style/hand_size"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_batu" />
+
+        <ImageView
+            android:id="@+id/iv_paper_p2"
+            style="@style/hand_size"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_gunting" />
+
+        <ImageView
+            android:id="@+id/iv_scissor_p2"
+            style="@style/hand_size"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_kertas" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/layout_p2"
+        app:layout_constraintStart_toEndOf="@+id/layout_p1"
+        app:layout_constraintTop_toBottomOf="@+id/layout_p1" />
+
+    <ImageButton
+        android:id="@+id/iv_refresh"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
